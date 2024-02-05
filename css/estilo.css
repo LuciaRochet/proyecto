@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-image: linear-gradient(-45deg, #266df0 50%, #e4e6ed 50%);
+  font-family: "Raleway", sans-serif;
+  font: 16px sans-serif;
+}
+
+.menu {
+  background-color: #242424;
+  list-style: none;
+  margin: 20px auto;
+  text-align: center;
+  overflow: hidden;
+}
+.menu ul {
+  padding: 8px;
+}
+.menu li {
+  display: inline-block;
+  text-align: center;
+}
+.menu li a {
+  padding: 20px;
+  color: #a8b7e0;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.menu li a:hover {
+  color: #07203d;
+  background-color: #ffffff;
+  border-radius: 10%;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+footer {
+  padding: 30px;
+  background-color: #383a3d;
+  color: #e4e6ed;
+  height: 100%;
+}
+/*
+document.addEventListener('DOMContentLoaded', () => {
+ const elementosCarousel = document.querySelectorAll('.carousel');
+ M.Carousel.init(elementosCarousel, {
+    duration: 150
+
+ });
+}); */
+.trabajos {
+  text-align: center;
+}
+.ready_go {
+  text-align: center;
+}
+
+.imagenes {
+  display: inline-block;
+  margin: 0;
+  padding: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+input:invalid + span::after {
+  content: "✖";
+}
+
+input:valid + span::after {
+  content: "✓";
+}
+
+.cajaform {
+  color: #a8b7e0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  margin: auto;
+  background-color: #222325be;
+  height: 350px;
+  width: 450px;
+  padding: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  box-shadow: 8px 10px 10px #0000007c;
+  backdrop-filter: blur(8px);
+  border-radius: 8%;
+}
+
+.cajaform textarea {
+  resize: none;
+}
+
+/*
+.messageBox {
+  size="50"
+  maxlength="50"
+}
+.tel {
+  padding-bottom: 0px;
+  margin: auto;
+  background-color: #383a3de5;
+  width: 620px;
+  height: 100px;
+  padding: 0.5rem;
+  margin-bottom: 100px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 8px 10px 10px #0000007c;
+  backdrop-filter: blur(8px);
+}*/
+label {
+  line-height: 22px;
+}
+
+label::after {
+  content: ":";
+}
+.calendario {
+  color: #a8b7e0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  margin: auto;
+  background-color: #222325be;
+  height: 300px;
+  width: 350px;
+  padding: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  box-shadow: 8px 10px 10px #0000007c;
+  backdrop-filter: blur(8px);
+  border-radius: 8%;
+}
