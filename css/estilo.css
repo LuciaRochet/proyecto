@@ -52,14 +52,7 @@ footer {
   color: #e4e6ed;
   height: 100%;
 }
-/*
-document.addEventListener('DOMContentLoaded', () => {
- const elementosCarousel = document.querySelectorAll('.carousel');
- M.Carousel.init(elementosCarousel, {
-    duration: 150
 
- });
-}); */
 .trabajos {
   text-align: center;
 }
@@ -70,7 +63,15 @@ document.addEventListener('DOMContentLoaded', () => {
 .imagenes {
   display: inline-block;
   margin: 0;
-  padding: 10px;
+  padding: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+iframe {
+  display: inline-block;
+  margin: 0;
+  padding: 20px;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
@@ -106,24 +107,6 @@ input:valid + span::after {
   resize: none;
 }
 
-/*
-.messageBox {
-  size="50"
-  maxlength="50"
-}
-.tel {
-  padding-bottom: 0px;
-  margin: auto;
-  background-color: #383a3de5;
-  width: 620px;
-  height: 100px;
-  padding: 0.5rem;
-  margin-bottom: 100px;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 8px 10px 10px #0000007c;
-  backdrop-filter: blur(8px);
-}*/
 label {
   line-height: 22px;
 }
@@ -147,4 +130,48 @@ label::after {
   box-shadow: 8px 10px 10px #0000007c;
   backdrop-filter: blur(8px);
   border-radius: 8%;
+}
+.container {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 0.5fr 2.5fr 0.5fr;
+  grid-auto-columns: 1fr;
+  gap: 2px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "menu header header"
+    "menu main aside"
+    "footer footer footer";
+}
+@media screen and (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 0.5fr 2.5fr 0.5fr 0.5fr;
+    grid-template-areas:
+      "menu header "
+      "menu main"
+      "menu aside"
+      "footer footer";
+  }
+}
+@media screen and (max-width: 500px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.5fr 2.5fr 0.5fr 0.5fr;
+    grid-template-areas:
+      "header "
+      "menu"
+      "main"
+      "aside"
+      "footer";
+  }
+}
+.productos {
+  grid-area: productos;
+}
+.servicios {
+  grid-area: servicios;
+}
+.footer {
+  grid-area: footer;
 }
