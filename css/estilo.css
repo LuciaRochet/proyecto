@@ -55,7 +55,9 @@ footer {
   padding: 30px;
   background-color: #383a3d;
   color: #e4e6ed;
-  height: 100%;
+  bottom: 0;
+  width: 100%;
+
   text-align: center;
 }
 
@@ -137,32 +139,32 @@ label::after {
   backdrop-filter: blur(8px);
   border-radius: 8%;
 }
-.container {
+.contenedor {
   display: grid;
-  width: 90%;
   margin: auto;
-  grid-template-columns: 3fr 1fr;
-  grid-template-rows: auto 3fr auto;
+  grid-template-columns: 8fr 1fr;
+  grid-template-rows: 1fr, 1fr, 1fr;
   grid-template-areas:
     "header header"
     "main aside"
     "footer footer";
 }
-@media (width > 768px) {
-  .container {
+@media (width < 768px) {
+  .contenedor {
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.5fr 2.5fr 0.5fr 0.5fr;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas:
       "header header"
       "menu menu"
-      "main aside"
+      "main main"
+      "aside aside"
       "footer footer";
   }
 }
 @media screen and (max-width: 500px) {
-  .container {
+  .contenedor {
     grid-template-columns: 1fr;
-    grid-template-rows: 0.5fr 0.5fr 2.5fr 0.5fr 0.5fr;
+    grid-template-rows: repeat(5, 1fr);
     grid-template-areas:
       "header"
       "menu"
@@ -171,18 +173,25 @@ label::after {
       "footer";
   }
 }
-.container header {
+.header {
   grid-area: header;
 }
-.container menu {
+.menu {
   grid-area: menu;
 }
-.container main {
+.main {
   grid-area: main;
 }
-.container aside {
+.aside {
   grid-area: aside;
 }
+.footer {
+  grid-area: footer;
+}
+.contenedor {
+  position: relative;
+}
+
 .aside {
   background-color: #ffffff3d;
   padding: 1.2rem;
@@ -195,24 +204,20 @@ label::after {
   align-self: center;
   margin: 2rem;
 }
-
-.container footer {
-  grid-area: footer;
-}
 .publi {
   list-style: flex;
-  margin: 10px auto;
-  padding: 8px;
+  margin: 20px auto;
+  padding: 20px;
   overflow: hidden;
   display: flex;
 }
 .publi ul {
-  padding: 8px;
+  padding: 20px;
   justify-content: flex-end;
 }
 .publi li {
   display: inline-block;
-  padding: 10px;
+  padding: 20px;
 }
 .contenedorpubli {
   display: flex;
