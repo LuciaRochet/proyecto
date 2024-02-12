@@ -200,10 +200,22 @@ label::after {
   grid-area: footer;
 }
 .publi {
+  list-style: flex;
+  margin: 10px auto;
+  padding: 8px;
+  overflow: hidden;
+  display: flex;
+}
+.publi ul {
+  padding: 8px;
+  justify-content: flex-end;
+}
+.publi li {
   display: inline-block;
-  margin: 0;
-  padding: 20px;
+  padding: 10px;
+}
+.contenedorpubli {
+  display: flex;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  flex-direction: row;
 }
