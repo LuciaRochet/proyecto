@@ -141,9 +141,11 @@ label::after {
   display: grid;
   width: 90%;
   margin: auto;
-  grid-template-columns: 2fr 2fr 2fr;
-  grid-template-rows: 2fr 2fr 2fr 2fr 2fr;
-  gap: 0px 0px;
+  grid-template-columns: repeat(3, 2fr);
+  grid-template-rows: repeat(5, 2fr);
+
+  gap: 8px 8px;
+  justify-items: center;
   grid-template-areas:
     "header header header"
     "menu menu menu"
@@ -153,12 +155,12 @@ label::after {
 }
 @media screen and (max-width: 768px) {
   .container {
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 1fr;
     grid-template-rows: 0.5fr 2.5fr 0.5fr 0.5fr;
     grid-template-areas:
-      "menu header "
-      "menu main"
-      "menu aside"
+      "header header"
+      "menu menu"
+      "main aside"
       "footer footer";
   }
 }
