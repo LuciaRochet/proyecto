@@ -56,7 +56,6 @@ p {
 }
 
 .imagenes {
-  display: inline-block;
   margin: 10px;
   padding: 20px;
   align-items: center;
@@ -64,6 +63,7 @@ p {
   flex-direction: row;
   justify-content: center;
   margin-left: 25px;
+  display: inline-block;
 }
 iframe {
   display: inline-block;
@@ -147,8 +147,8 @@ label::after {
   grid-template-areas:
     "header header header"
     "menu menu menu"
-    ".  main aside"
-    ".  main aside"
+    "main  main aside"
+    "main  main aside"
     "footer footer footer";
 }
 @media (width < 768px) {
