@@ -56,23 +56,27 @@ p {
 }
 
 .imagenes {
-  margin: 10px;
-  padding: 20px;
+  margin: none;
+  padding: none;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
-  margin-left: 25px;
   display: inline-block;
+  margin-bottom: 20px;
+  margin-right: 10px;
 }
 iframe {
-  display: inline-block;
-  margin: 0;
-  padding: 20px;
+  margin: none;
+  padding: none;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
-  margin-left: 25px;
+  justify-content: center;
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 footer {
   padding: 30px;
@@ -98,8 +102,8 @@ input:valid + span::after {
   gap: 50px;
   margin: auto;
   background-color: #222325be;
-  height: 350px;
-  width: 450px;
+  height: 280px;
+  width: 280px;
   padding: 30px;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -107,7 +111,6 @@ input:valid + span::after {
   backdrop-filter: blur(8px);
   border-radius: 8%;
 }
-
 .cajaform textarea {
   resize: none;
 }
@@ -127,13 +130,13 @@ label::after {
   gap: 50px;
   margin: auto;
   background-color: #222325be;
-  height: 300px;
-  width: 350px;
+  height: 240px;
+  width: 240px;
   padding: 30px;
   margin-top: 50px;
   margin-bottom: 50px;
-  margin-right: 100px;
-  margin-left: 100px;
+  margin-right: 50px;
+  margin-left: 50px;
   box-shadow: 8px 10px 10px #0000007c;
   backdrop-filter: blur(8px);
   border-radius: 8%;
@@ -141,7 +144,7 @@ label::after {
 .contenedor {
   display: grid;
   margin: auto;
-  grid-template-columns: repeat(3 1fr);
+  grid-template-columns: repeat(auto-fill 1fr);
   grid-template-rows: repeat(4 1fr);
   gap: 0px 0px;
   grid-template-areas:
@@ -163,15 +166,15 @@ label::after {
       "footer footer";
   }
 }
-@media screen and (max-width: 500px) {
+@media (width < 300px) {
   .contenedor {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: auto-fill;
     grid-template-areas:
-      "header"
+      "header "
       "menu"
-      "main"
-      "aside"
+      "main "
+      "aside "
       "footer";
   }
 }
