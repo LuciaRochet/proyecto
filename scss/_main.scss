@@ -1,51 +1,3 @@
-@charset "UTF-8";
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  min-height: 100vh;
-  background-image: linear-gradient(-45deg, #266df0 50%, #e4e6ed 50%);
-  font-family: "Raleway", sans-serif;
-  font: 16px sans-serif;
-}
-
-.menu {
-  background-color: #242424;
-  list-style: none;
-  margin: 20px auto;
-  text-align: center;
-  padding: 0.22rem;
-  overflow: hidden;
-  justify-content: space-around;
-  display: flex;
-}
-
-.menu ul {
-  padding: 8px;
-  justify-content: flex-end;
-}
-
-.menu li {
-  display: inline-block;
-  text-align: center;
-  padding: 10px;
-}
-
-.menu li a {
-  padding: 20px;
-  color: #a8b7e0;
-  margin: 10px;
-  text-decoration: none;
-}
-
-.menu li a:hover {
-  color: #07203d;
-  background-color: rgba(255, 255, 255, 0.4431372549);
-  border-radius: 5%;
-}
-
 h1,
 h2,
 h3,
@@ -54,15 +6,19 @@ p {
   font-family: "Montserrat", sans-serif;
   text-align: center;
 }
-
 .trabajos {
   text-align: center;
 }
-
 .ready_go {
   text-align: center;
 }
-
+.contenedorimagenes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 20px;
+}
 .imagenes {
   list-style: flex;
   margin: 20px auto;
@@ -93,15 +49,6 @@ iframe {
   margin-left: 10px;
 }
 
-footer {
-  padding: 30px;
-  background-color: #383a3d;
-  color: #e4e6ed;
-  bottom: 0;
-  width: 100%;
-  text-align: end;
-}
-
 input:invalid + span::after {
   content: "✖";
 }
@@ -117,18 +64,16 @@ input:valid + span::after {
   justify-content: center;
   gap: 50px;
   margin: auto;
-  background-color: rgba(34, 35, 37, 0.7450980392);
+  background-color: #222325be;
   height: 280px;
   width: 280px;
   padding: 30px;
   margin-top: 50px;
   margin-bottom: 50px;
-  box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.4862745098);
-  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 8px 10px 10px #0000007c;
   backdrop-filter: blur(8px);
   border-radius: 8%;
 }
-
 .cajaform textarea {
   resize: none;
 }
@@ -140,15 +85,14 @@ label {
 label::after {
   content: ":";
 }
-
 .calendario {
-  color: #a8b7e0;
+  color: $calendario;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 50px;
   margin: auto;
-  background-color: rgba(34, 35, 37, 0.7450980392);
+  background-color: #222325be;
   height: 240px;
   width: 240px;
   padding: 30px;
@@ -156,49 +100,51 @@ label::after {
   margin-bottom: 50px;
   margin-right: 50px;
   margin-left: 50px;
-  box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.4862745098);
-  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 8px 10px 10px #0000007c;
   backdrop-filter: blur(8px);
   border-radius: 8%;
 }
-
 .contenedor {
   display: grid;
   margin: auto;
   grid-template-columns: repeat(auto-fill 1fr);
   grid-template-rows: repeat(4 1fr);
   gap: 0px 0px;
-  grid-template-areas: "header header header" "menu menu menu" "main  main aside" "main  main aside" "footer footer footer";
+  grid-template-areas:
+    "header header header"
+    "menu menu menu"
+    "main  main aside"
+    "main  main aside"
+    "footer footer footer";
 }
 
-@media (width < 768px) {
-  .contenedor {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto 1fr;
-    grid-template-areas: "header header" "menu menu" "main main" "aside aside" "footer footer";
-  }
-}
-@media (width < 300px) {
-  .contenedor {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto-fill;
-    grid-template-areas: "header " "menu" "main " "aside " "footer";
-  }
-}
-.header {
-  grid-area: header;
+.aside {
+  background-color: rgba(118, 122, 122, 0.2274509804);
+  padding: 0.2rem;
+  display: flex;
+  flex-direction: column;
+  grid-area: aside;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  margin-left: 10px;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.4862745098);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 
-.menu {
-  grid-area: menu;
+.aside h3 {
+  color: #ffffff;
+}
+
+.aside .img {
+  align-self: center;
+  margin: 2rem;
 }
 
 .main {
   grid-area: main;
-}
-
-.footer {
-  grid-area: footer;
 }
 
 .contenedor {
@@ -229,7 +175,6 @@ label::after {
   align-self: center;
   margin: 2rem;
 }
-
 .publi {
   list-style: flex;
   margin: 20px auto;
@@ -237,7 +182,6 @@ label::after {
   overflow: hidden;
   display: flex;
 }
-
 .publi ul {
   padding: 20px;
   justify-content: flex-end;
@@ -252,4 +196,4 @@ label::after {
   display: flex;
   justify-content: center;
   align-items: center;
-} /*# sourceMappingURL=estilo.css.map */
+}

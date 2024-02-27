@@ -1,0 +1,40 @@
+header {
+  .menu {
+    background-color: $colormenu;
+    list-style: none;
+    margin: 20px auto;
+    text-align: center;
+    padding: 0.22rem;
+    overflow: hidden;
+    justify-content: space-around;
+    display: flex;
+  }
+  .menu ul {
+    padding: 8px;
+    justify-content: flex-end;
+  }
+  .menu li {
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+  }
+  .menu li a {
+    padding: 20px;
+    color: #a8b7e0;
+    margin: 10px;
+    text-decoration: none;
+  }
+
+  .menu li a:hover {
+    color: #07203d;
+    background-color: #ffffff71;
+    border-radius: 5%;
+  }
+  .header {
+    grid-area: header;
+  }
+
+  .menu {
+    grid-area: menu;
+  }
+}
