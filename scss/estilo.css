@@ -126,7 +126,7 @@ input:valid + span::after {
   margin-bottom: 50px;
   box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.4862745098);
   -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   border-radius: 8%;
 }
 
@@ -159,7 +159,7 @@ label::after {
   margin-left: 50px;
   box-shadow: 8px 10px 10px rgba(0, 0, 0, 0.4862745098);
   -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
   border-radius: 8%;
 }
 
@@ -261,4 +261,4 @@ footer {
   bottom: 0;
   width: 100%;
   text-align: end;
-}/*# sourceMappingURL=estilo.css.map */
+} /*# sourceMappingURL=estilo.css.map */

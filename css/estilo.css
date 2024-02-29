@@ -277,6 +277,11 @@ label::after {
     transform: scale(1.2) translate(5%, 5%);
   }
 }
+*::selection {
+  color: #000000;
+  background-color: #51535cc2;
+}
+
 /*animacion contenidopubli*/
 
 /*# sourceMappingURL=estilo.css.map */
