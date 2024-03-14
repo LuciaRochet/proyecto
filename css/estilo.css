@@ -11,41 +11,6 @@ body {
   font: 16px sans-serif;
 }
 
-.menu {
-  background-color: #383a3d;
-  list-style: none;
-  margin: 20px auto;
-  text-align: center;
-  padding: 0.22rem;
-  overflow: hidden;
-  justify-content: space-around;
-  display: flex;
-}
-
-.menu ul {
-  padding: 8px;
-  justify-content: flex-end;
-}
-
-.menu li {
-  display: inline-block;
-  text-align: center;
-  padding: 10px;
-}
-
-.menu li a {
-  padding: 20px;
-  color: #a8b7e0;
-  margin: 10px;
-  text-decoration: none;
-}
-
-.menu li a:hover {
-  color: #07203d;
-  background-color: rgba(255, 255, 255, 0.4431372549);
-  border-radius: 5%;
-}
-
 h1,
 h2,
 h3,
@@ -56,10 +21,6 @@ p {
 }
 
 .trabajos {
-  text-align: center;
-}
-
-.ready_go {
   text-align: center;
 }
 
