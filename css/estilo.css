@@ -7,12 +7,12 @@
 body {
   min-height: 100vh;
   background-image: linear-gradient(-45deg, #266df0 50%, #e4e6ed 50%);
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font: 16px sans-serif;
 }
 
 .menu {
-  background-color: #242424;
+  background-color: #383a3d;
   list-style: none;
   margin: 20px auto;
   text-align: center;
@@ -115,10 +115,12 @@ input:valid + span::after {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 50px;
+  font-family: "Montserrat", sans-serif;
+  gap: 25px;
   margin: auto;
+  justify-content: center;
   background-color: rgba(34, 35, 37, 0.7450980392);
-  height: 280px;
+  height: 380px;
   width: 280px;
   padding: 30px;
   margin-top: 50px;
@@ -131,10 +133,14 @@ input:valid + span::after {
 
 .cajaform textarea {
   resize: none;
+  min-height: 150px;
+  min-width: 225px;
+  font-family: "Montserrat", sans-serif;
 }
 
 label {
   line-height: 22px;
+  font-family: "Montserrat", sans-serif;
 }
 
 label::after {
@@ -146,10 +152,11 @@ label::after {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  font-family: "Montserrat", sans-serif;
   gap: 50px;
   margin: auto;
   background-color: rgba(34, 35, 37, 0.7450980392);
-  height: 240px;
+  height: 350px;
   width: 240px;
   padding: 30px;
   margin-top: 50px;
@@ -195,6 +202,7 @@ label::after {
 
 .main {
   grid-area: main;
+  min-height: 83vh;
 }
 
 .footer {
