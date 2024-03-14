@@ -82,7 +82,7 @@ input:valid + span::after {
   justify-content: center;
   background-color: rgba(34, 35, 37, 0.7450980392);
   height: 380px;
-  width: 280px;
+  width: 300px;
   padding: 30px;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -118,7 +118,7 @@ label::after {
   margin: auto;
   background-color: rgba(34, 35, 37, 0.7450980392);
   height: 350px;
-  width: 240px;
+  width: 250px;
   padding: 30px;
   margin-top: 50px;
   margin-bottom: 50px;
@@ -180,6 +180,7 @@ label::after {
   display: flex;
   flex-direction: column;
   grid-area: aside;
+  margin-top: 20px;
   margin-bottom: 20px;
   margin-right: 10px;
   margin-left: 10px;
